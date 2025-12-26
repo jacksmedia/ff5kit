@@ -1,0 +1,14 @@
+== bug fix for no-mime settings ==
+: adjust the index of commands for three slots selection for no-mime jobs
+
+   C2/B4F6 EA           NOP             
+
+== always allow fight/item commands ==
+: allows fight/item commands for all jobs
+
+   C2/CF30 80 00        BRA $CF32
+
+== table of allowed commands ==
+: sets the three slots selection for all jobs
+
+   C0/ED61 - C0/ED76    #$01 for all addresses

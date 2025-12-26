@@ -1,0 +1,244 @@
+== ability list pointers ==
+
+D1/52C0 00 53 Knight
+D1/52C2 0F 53 Monk
+D1/52C4 21 53 Thief
+D1/52C6 33 53 Dragoon
+D1/52C8 3C 53 Ninja
+D1/52CA 45 53 Samurai
+D1/52CC 51 53 Berserker
+D1/52CE 5A 53 Hunter
+D1/52D0 66 53 Mystic Knight
+D1/52D2 78 53 White Wizard
+D1/52D4 8A 53 Black Wizard
+D1/52D6 9C 53 Time Wizard
+D1/52D8 AE 53 Summoner
+D1/52DA C0 53 Blue Wizard
+D1/52DC C9 53 Red Wizard
+D1/52DE D5 53 Mediator
+D1/52E0 E1 53 Chemist
+D1/52E2 ED 53 Geomancer
+D1/52E4 F6 53 Bard
+D1/52E6 05 54 Dancer
+D1/52E8 0E 54 Mimic
+
+== Number of abilities by job ==
+
+D1/52EA 05 Knight
+D1/52EB 06 Monk
+D1/52EC 06 Thief
+D1/52ED 03 Dragoon
+D1/52EE 03 Ninja
+D1/52EF 04 Samurai
+D1/52F0 03 Berserker
+D1/52F1 04 Hunter
+D1/52F2 06 Mystic Knight
+D1/52F3 06 White Wizard
+D1/52F4 06 Black Wizard
+D1/52F5 06 Time Wizard
+D1/52F6 06 Summoner
+D1/52F7 03 Blue Wizard
+D1/52F8 04 Red Wizard
+D1/52F9 04 Mediator
+D1/52FA 04 Chemist
+D1/52FB 03 Geomancer
+D1/52FC 05 Bard
+D1/52FD 03 Dancer
+D1/52FE 03 Mimic
+D1/52FF 00 Freelancer
+
+== jobs abilities ==
+
+: knight
+  D1/5300 19 00 94      cover, 25
+  D1/5303 32 00 06      guard, 50
+  D1/5306 4B 00 81      eq armor, 75
+  D1/5309 64 00 83      eq sword, 100
+  D1/530C C8 00 91      double grip, 200
+                
+: monk
+  D1/530F 0A 00 90      brawl, 10
+  D1/5312 14 00 98      barrier, 20
+  D1/5315 1E 00 25      hide, 30
+  D1/5318 28 00 07      kick, 40
+  D1/531B 64 00 20      drink, 100
+  D1/531E 64 00 09      mantra, 100
+                
+: thief
+  D1/5321 19 00 0B      steal, 25
+  D1/5324 19 00 0F      smoke, 25
+  D1/5327 32 00 9A      caution, 50
+  D1/532A 32 00 29      flirt, 50
+  D1/532D 4B 00 8A      agility up, 75
+  D1/5330 64 00 0C      capture, 100
+                  
+:dragoon
+  D1/5333 32 00 84      eq spears, 50
+  D1/5336 32 00 0D      jump, 50
+  D1/5339 C8 00 14      slash, 200
+
+:ninja
+  D1/533C 32 00 9B      preemptive, 50
+  D1/533F 64 00 11      throw, 100
+  D1/5342 C8 00 92      two hands, 200
+                  
+:samurai
+  D1/5345 19 00 85      eq katanas, 25
+  D1/5348 32 00 80      eq shield, 50
+  D1/534B 4B 00 96      evade, 75
+  D1/534E C8 00 10      image, 200
+                
+:berserker
+  D1/5351 32 00 99      berserk, 50
+  D1/5354 4B 00 86      eq axes, 75
+  D1/5357 C8 00 95      counter, 200
+                
+:hunter
+  D1/535A 19 00 16      aim, 25
+  D1/535D 4B 00 87      eq bows, 75
+  D1/5360 64 00 08      build up, 100
+  D1/5363 C8 00 17      x-fight, 200
+                
+:mystic knight
+  D1/5366 14 00 2C      sword 1, 20
+  D1/5369 28 00 2D      sword 2, 40
+  D1/536C 3C 00 2E      sword 3, 60
+  D1/536F 50 00 2F      sword 4, 80
+  D1/5372 64 00 30      sword 5, 100
+  D1/5375 78 00 31      sword 6, 120
+
+:white mage
+  D1/5378 0F 00 32      white 1, 15
+  D1/537B 1E 00 33      white 2, 30
+  D1/537E 2D 00 34      white 3, 45
+  D1/5381 3C 00 35      white 4, 60
+  D1/5384 4B 00 36      white 5, 75
+  D1/5387 5A 00 37      white 6, 90
+                
+:black mage
+  D1/538A 0F 00 38      black 1, 15
+  D1/538D 1E 00 39      black 2, 30
+  D1/5390 2D 00 3A      black 3, 45
+  D1/5393 3C 00 3B      black 4, 60
+  D1/5396 4B 00 3C      black 5, 75
+  D1/5399 5A 00 3D      black 6, 90
+                
+:time mage
+  D1/539C 0F 00 3E      time 1, 15
+  D1/539F 1E 00 3F      time 2, 30
+  D1/53A2 2D 00 40      time 3, 45
+  D1/53A5 3C 00 41      time 4, 60
+  D1/53A8 4B 00 42      time 5, 75
+  D1/53AB 5A 00 43      time 6, 90
+                
+:summoner
+  D1/53AE 14 00 18      conjure, 20
+  D1/53B1 28 00 44      summon 1, 40
+  D1/53B4 3C 00 45      summon 2, 60
+  D1/53B7 50 00 46      summon 3, 80
+  D1/53BA 64 00 47      summon 4, 100
+  D1/53BD 78 00 48      summon 5, 120
+                
+:blue mage
+  D1/53C0 19 00 97      learn, 25
+  D1/53C3 4B 00 4D      blue, 75
+  D1/53C6 C8 00 1C      control, 200
+                
+:red mage
+  D1/53C9 1E 00 49      red 1, 30
+  D1/53CC 3C 00 4A      red 2, 60
+  D1/53CF 5A 00 4B      red 3, 90
+  D1/53D2 78 00 4C      x-magic, 120
+                
+:mediator
+  D1/53D5 19 00 1B      tame, 25
+  D1/53D8 32 00 1D      catch, 50
+  D1/53DB 4B 00 88      eq whips, 75
+  D1/53DE C8 00 19      observe, 200
+                
+:chemist
+  D1/53E1 19 00 93      medicine, 25
+  D1/53E4 19 00 9F      eq rods, 25
+  D1/53E7 64 00 1A      analyze, 100
+  D1/53EA C8 00 1F      mix, 200
+                
+:geomancer
+  D1/53ED 19 00 9E      pitfall, 25
+  D1/53F0 4B 00 23      terrain, 75
+  D1/53F3 C8 00 0E      dragon, 200
+                
+:bard
+  D1/53F6 19 00 89      eq harps, 25
+  D1/53F9 19 00 15      animals, 25
+  D1/53FC 32 00 28      sing, 50
+  D1/53FF 64 00 21      pray, 100
+  D1/5402 64 00 22      revive, 100
+                
+:dancer
+  D1/5405 32 00 2A      dance, 50
+  D1/5408 64 00 82      eq ribbon, 100
+  D1/540B C8 00 13      gil toss, 200
+                
+:mimic
+  D1/540E 32 00 8D      hp 30%, 50
+  D1/5411 32 00 8F      mp 30%, 50
+  D1/5414 C8 00 2B      mimic, 200
+  
+:left over
+  D1/5417 ?? ?? ??      
+  D1/541A ?? ?? ??
+  D1/541D ?? ?? ??
+  D1/5420 ?? ?? ??
+  D1/5423 ?? ?? ??
+  D1/5426 ?? ?? ??
+  D1/5429 ?? ?? ??
+  
+== native abilities ==
+
+D1/5760 05 00 00 02 knight
+D1/5764 05 00 00 02 monk
+D1/5768 05 00 00 02 thief
+D1/576C 05 00 00 02 dragoon
+D1/5770 05 00 00 02 ninja
+D1/5774 05 00 00 02 samurai
+D1/5778 05 00 00 02 berserker
+D1/577C 05 00 00 02 hunter
+D1/5780 05 00 00 02 mystic knight
+D1/5784 05 00 00 02 white wizard
+D1/5788 05 00 00 02 black wizard
+D1/578C 05 00 00 02 time wizard
+D1/5790 05 00 00 02 summoner
+D1/5794 05 00 00 02 blue wizard
+D1/5798 05 00 00 02 red wizard
+D1/579C 05 00 00 02 mediator
+D1/57A0 05 00 00 02 chemist
+D1/57A4 05 00 00 02 geomancer
+D1/57A8 05 00 00 02 bard
+D1/57AC 05 00 00 02 dancer
+D1/57B0 05 00 00 02 mimic
+D1/57B4 05 00 00 02 freelancer
+
+== innate abilities ==
+D1/57B8 0D 00 knight
+D1/57BA 0D 00 monk
+D1/57BC 0D 00 thief
+D1/57BE 0D 00 dragoon
+D1/57C0 0D 00 ninja
+D1/57C2 0D 00 samurai
+D1/57C4 0D 00 berserker
+D1/57C6 0D 00 hunter
+D1/57C8 0D 00 mystic knight
+D1/57CA 0D 00 white wizard
+D1/57CC 0D 00 black wizard
+D1/57CE 0D 00 time wizard
+D1/57D0 0D 00 summoner
+D1/57D2 0D 00 blue wizard
+D1/57D4 0D 00 red wizard
+D1/57D6 0D 00 mediator
+D1/57D8 0D 00 chemist
+D1/57DA 0D 00 geomancer
+D1/57DC 0D 00 bard
+D1/57DE 0D 00 dancer
+D1/57E0 0D 00 mimic
+D1/57E2 0D 00 freelancer
+

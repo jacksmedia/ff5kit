@@ -1,0 +1,26 @@
+== get innate abilities ==
+: get innate abilities.
+: 2A = Job ID
+; available: C2/E916 - C2/E932
+
+:init
+   C2/E916 DA           PHX
+   C2/E917 5A           PHY
+:get innate abilities for job
+   C2/E918 29 1F 00     AND #$001F      filter special bits from job id?
+   C2/E91B 0A           ASL
+   C2/E91C AA           TAX
+   C2/E91D BF B8 57 D1  LDA $D157B8,X   get individual innate abilities
+   C2/E921 48           PHA             save by now
+:get innate abilities from mastered jobs
+   C2/E922 A4 80        LDY $80
+   C2/E924 B9 4E 05     LDA $054E,Y     get mastered innate abilities
+   C2/E927 29 FF F7     AND #$F7FF      remove one mastered ability. Perhaps, berserker status?
+:merge individual and mastered abilities
+   C2/E92A 03 01        ORA $01,S       merge all abilities (individual and mastered)
+   C2/E92C 83 01        STA $01,S       save by now
+:exit
+   C2/E92E 68           PLA             get final innate abilities
+   C2/E92F 7A           PLY
+   C2/E930 FA           PLX
+   C2/E931 60           RTS

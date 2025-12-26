@@ -1,0 +1,80 @@
+== x-fight adjustments ==
+
+:set random number of attacks : [1, 4]
+   C2/0C6F 20 D9 0D     JSR $0DD9       random: [1, 4]
+   C2/0C72 85 22        STA $22
+   C2/0C74 80 00        BRA $0C76       optimized NOP
+
+:decrease number of attacks
+   C2/0D96 C6 22        DEC $22         number of attacks
+   C2/0D98 A5 22        LDA $22         remaining number of attacks
+   C2/0D9A 80 00        BRA $0D9C       optimized NOP
+   C2/0D9C F0 03        BEQ $0DA1       end if number of attacks reaches zero
+   C2/0D9E 4C 76 0C     JMP $0C76       execute next attack if not
+
+== set default data ==
+ * C2/0DA2 48           PHA
+   C2/0DA3 20 AA 16     JSR $16AA
+   C2/0DA6 20 5F 17     JSR $175F
+   C2/0DA9 20 A9 02     JSR $02A9
+   C2/0DAC 20 C2 02     JSR $02C2
+   C2/0DAF 68           PLA
+   C2/0DB0 60           RTS
+   
+== set default message ==
+ * C2/0DB1 48           PHA
+   C2/0DB2 20 FA 16     JSR $16FA       display message
+   C2/0DB5 68           PLA
+   C2/0DB6 60           RTS
+   
+== set default animation ==
+ * C2/0DB7 48           PHA
+   C2/0DB8 3A           DEC
+   C2/0DB9 20 E1 16     JSR $16E1
+   C2/0DBC 20 1A 17     JSR $171A
+   C2/0DBF 20 35 17     JSR $1735
+   C2/0DC2 20 E3 98     JSR $98E3
+   C2/0DC5 68           PLA
+   C2/0DC6 60           RTS
+
+== setup attack ==
+ * C2/0DC7 20 A2 0D     JSR $0DA2
+   C2/0DCA 20 B1 0D     JSR $0DB1
+   C2/0DCD 20 B7 0D     JSR $0DB7
+   C2/0DD0 60           RTS
+
+== command setup ==
+ * C2/0DD1 AD 4D 47     LDA $474D       command index
+   C2/0DD4 1A           INC             adjust index difference
+   C2/0DD5 20 C7 0D     JSR $0DC7       setup attack
+   C2/0DD8 60           RTS
+
+=== get random between [1,4] ===
+ * C2/0DD9 DA           PHX
+   C2/0DDA A9 01        LDA #$01
+   C2/0DDC AA           TAX
+   C2/0DDD A9 04        LDA #$04
+   C2/0DDF 20 7C 00     JSR $007C       random: [X, A] = [1, 4]
+   C2/0DE2 FA           PLX
+   C2/0DE3 60           RTS
+
+== pointers ==
+   C2/4AA0 D1 0D kick
+   C2/4AA4 D1 0D mantra
+   C2/4AAE D1 0D dragon
+   C2/4AB2 D1 0D image
+   C2/4AC4 D1 0D observe
+   C2/4AC6 D1 0D analyze
+!  C2/4AD6 8A 11 revive
+   C2/4AE4 D1 0D flirt
+   
+== data ==
+ + D1/5A18 48 00 00 00 28 80 96 00 kick         150HP damage
+ + D1/5A28 00 00 00 00 51 80 10 01 mantra       raises level
+ + D1/5A50 28 00 00 00 0E 80 40 00 dragon       drains MP
+ + D1/5A60 00 00 00 00 13 80 00 02 image        sets image status
+ + D1/5A80 28 00 00 00 54 80 00 00 slash        damage based on current HP (inverted)
+ + D1/5AA8 00 00 00 00 27 00 00 60 observe      casts armor/shell
+ + D1/5AB0 00 00 00 00 27 00 00 88 analyze      casts wall/haste
+ + D1/5AF0 40 00 00 00 1A 00 80 04 revive       revives fallen allies with 25% max HP
+ + D1/5B28 28 00 00 00 13 80 80 10 flirt        sets charm
