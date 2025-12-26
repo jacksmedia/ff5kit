@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run generate-patches && next build",
+    "build": "next build",
     "start": "next start",
     "dev": "next dev --turbopack",
     "lint": "next lint"
