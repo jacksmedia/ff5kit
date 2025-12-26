@@ -30,11 +30,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Head>
         <title>FF5 Patch Kit</title>
         <meta name="description" content="Create FF5 Builds" title="FF5 Kit" />
-        <link rel="icon" href="https://ultima-plus.vercel.app/img/favicon.png" sizes="any" />
+        <link rel="icon" href="https://ff5kit.vercel.app/img/favicon.png" sizes="any" />
       </Head>
 
       <body>
-          <ul className="nav d-flex justify-content-center">
+          <ul className="nav d-flex bg-black justify-content-center">
             {navLinks.map(({ href, label }) => (
               <Link key={href} href={href} passHref>
                 <li

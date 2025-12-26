@@ -80,7 +80,7 @@ main div {
   border:#ededed 8 dotted;
 }
 .active-border {
-  border:#ae7517 8 dotted;
+  border:#0af 8 dotted;
 }
 .passive-border {
   border:#ededed 8 dotted;
@@ -128,16 +128,16 @@ main div {
 /* all buttons: FileUploader, CustomOptionsPanel, DownloadRomButton */
 .nicer-btn {
   border-radius: 5px;
-  border: #ae7517 3px groove;
-  background: radial-gradient(#333, #333,#533608);
+  border: #1c2491 3px groove;
+  background: radial-gradient(#338, #123f8f,#143fa0);
 }
 .nicer-btn-blue{
   border-radius: 5px;
-  border: #ae7517 3px groove;
-  background: radial-gradient(#333, #333,#533608);
+  border: #1c2491 3px groove;
+  background: radial-gradient(#338, #123f8f,#143fa0);
 }
 .nicer-btn-blue:hover {
-  background: radial-gradient(#275de6,#00f);
+  background: radial-gradient(#275de6,#143fa0);
   border: #275de6 3px groove;
 }
 .blue-border { /* similar to above, only for Ultima Classic title image */
@@ -247,9 +247,9 @@ option span {
 /* index.tsx title styling */
 .app-title {
   line-height: 1;
-  color: #e8a216;
+  color: #65aedb;
   font-size: 50px;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 1), 4px 4px 0px #e87f16;
+  text-shadow: 2px 2px 0px #fff, 4px 4px 0px #275de6;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -267,11 +267,11 @@ option span {
 
 /* per page styling */
 .plus-patcher-bg {
-  background: radial-gradient(#187291, #237195, #000);
+  background: linear-gradient(#000, #338, #000);
 }
 .discord-bg {
   background: linear-gradient(#112,#000, #000);
 }
 .guides-bg {
-  background: linear-gradient(#112,#606, #000);
+  background: linear-gradient(#112,#338, #000);
 }

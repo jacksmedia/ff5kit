@@ -351,20 +351,12 @@ export default function PatchPage() {
     {/* Styles & Optional Patches */}
     <div className='d-flex justify-content-center align-items-center h-100'>
       {isReady && hasOptionalPatches && (
-        <><StylesPanel
-          categories={styleCategories}
-          selectedPatches={selectedStylePatches}
-          onSelectionChange={setSelectedStylePatches}
-          isDisabled={isPatching || !hasValidRom}
-        />
-        <h4>Styles are meant to be used without extra Options.</h4>
-        <p>Feel free to experiment, yet keep in mind they are not supported together.</p>
         <CustomOptionsPanel
           categories={optionalCategories}
           selectedPatches={selectedOptionalPatches}
           onSelectionChange={setSelectedOptionalPatches}
           isDisabled={isPatching || !hasValidRom}
-        /></>
+        />
       )}
       {/* Loading state for optional patches */}
       {loadingOptional && (
@@ -376,8 +368,8 @@ export default function PatchPage() {
       
       {/* ROM Information */}
       {hasValidRom && (
-        <div className="p-4 bg-gray-800 rounded-lg">
-          <h2 className="text-xl mb-2">ROM Ready:</h2>
+        <div className="p-4 bg-black rounded-lg">
+          <h2 className="text-xl mb-2">ROM Uploaded:</h2>
           <p className="font-mono text-sm">
             Uploaded CRC32: {romState!.originalCRC32}
           </p>
