@@ -6,7 +6,7 @@ const PlusTitle = () => {
       <Image
           className="nicer-btn"
           src="/img/Title.png"
-          alt="FF4 Ultima logo"
+          alt="FF5 title screen"
           width={256}
           height={224}
           priority
