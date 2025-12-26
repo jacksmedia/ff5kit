@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const PlusTitle = () => {
+const FF5Title = () => {
   return(
-    <a target="_blank" href="https://ultima-plus.vercel.app/">
+    <a target="_blank" href="https://ff5kit.vercel.app/">
       <Image
           className="nicer-btn"
           src="/img/Title.png"
@@ -14,4 +14,4 @@ const PlusTitle = () => {
     </a>
   );
 };
-export default PlusTitle;
+export default FF5Title;
